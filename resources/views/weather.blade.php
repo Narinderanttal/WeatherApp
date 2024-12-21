@@ -8,13 +8,10 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto p-4">
-        <!-- Navigation -->
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-bold">Weather App</h1>
             <a href="/" class="text-blue-500 underline">Home</a>
         </div>
-
-        <!-- Weather Form -->
         <form method="POST" action="/weather" class="mb-8">
             @csrf
             <div class="flex items-center justify-center space-x-4">
@@ -32,8 +29,6 @@
                 <p class="text-red-500 text-center mt-2">{{ $message }}</p>
             @enderror
         </form>
-
-        <!-- Weather Results -->
         @if(isset($weather))
             <div class="text-center bg-white p-6 rounded-lg shadow-md">
                 <h2 class="text-2xl font-bold">{{ $weather['city'] }}</h2>
